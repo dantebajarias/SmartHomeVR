@@ -15,24 +15,24 @@ public class RoombaMovement : MonoBehaviour
 
     void Update()
     {
-        if (isMovingForward)
+        if (isMovingForward) //Check if roomba is moving forward
         {
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-            distanceTraveled += moveSpeed * Time.deltaTime;
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime); //Move the roomba forward
+            distanceTraveled += moveSpeed * Time.deltaTime; //Keep track of the distance traveled
 
-            if (distanceTraveled >= moveDistance)
+            if (distanceTraveled >= moveDistance) //Once target distance reached, stop roomba
             {
                 isMovingForward = false;
                 distanceTraveled = 0f;
                 rotationTimer = 0f; // Reset rotation timer
             }
         }
-        else
+        else //If roomba stops moving
         {
-            rotationTimer += Time.deltaTime;
-            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-            
-            if (rotationTimer >= rotationDuration)
+            rotationTimer += Time.deltaTime; //Increase rotation timer
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime); //Rotate the roomba
+
+            if (rotationTimer >= rotationDuration) //Once target duration reached, start roomba movement
             {
                 isMovingForward = true;
                 rotationTimer = 0f; // Reset rotation timer
