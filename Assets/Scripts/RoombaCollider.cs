@@ -72,13 +72,15 @@ namespace Oculus.Interaction
         }
 
 
-
+        #region Inject
 
         public void InjectSelector(ISelector selector)
         {
             _selector = selector as UnityEngine.Object;
             Selector = selector;
         }
+
+        #endregion
 
     }
 }

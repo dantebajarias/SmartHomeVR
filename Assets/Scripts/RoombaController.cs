@@ -29,6 +29,7 @@ public class RoombaController : MonoBehaviour
 
             // Add listener for when the Toggle's value changes
             roombaUI.onValueChanged.AddListener(OnToggleValueChanged);
+            roombaUI.gameObject.SetActive(false);
         }
     }
 
