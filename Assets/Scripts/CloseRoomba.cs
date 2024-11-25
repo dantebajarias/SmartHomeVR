@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Oculus.Interaction
 {
-    public class RoombaCollider : MonoBehaviour
+    public class CloseRoomba : MonoBehaviour
     {
         [SerializeField, Interface(typeof(ISelector))]
         private UnityEngine.Object _selector;
@@ -59,7 +59,7 @@ namespace Oculus.Interaction
         {
             if (roombaUI != null)
             {
-                roombaUI.isOn = !roombaUI.isOn;
+                roombaUI.gameObject.SetActive(false);
             }
             if(_selected) return;
             _selected = true;
