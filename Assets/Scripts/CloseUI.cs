@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 namespace Oculus.Interaction
 {
-    public class CloseRoomba : MonoBehaviour
+    public class CloseUI : MonoBehaviour
     {
         [SerializeField, Interface(typeof(ISelector))]
         private UnityEngine.Object _selector;
 
         [SerializeField]
-        private Toggle roombaUI;
+        private Toggle UI;
 
         private ISelector Selector;
 
@@ -57,9 +57,9 @@ namespace Oculus.Interaction
 
         private void HandleSelected()
         {
-            if (roombaUI != null)
+            if (UI != null)
             {
-                roombaUI.gameObject.SetActive(false);
+                UI.gameObject.SetActive(false);
             }
             if(_selected) return;
             _selected = true;

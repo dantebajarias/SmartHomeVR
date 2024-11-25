@@ -7,6 +7,7 @@ public class RoombaController : MonoBehaviour
 {
     public Toggle roombaUI; // Assign RoombaUI in the Inspector
     public GameObject roomba; // Assign Roomba object in the Inspector
+    public bool defaultState;
 
     private RoombaMovement roombaMovementScript;
 
@@ -29,7 +30,7 @@ public class RoombaController : MonoBehaviour
 
             // Add listener for when the Toggle's value changes
             roombaUI.onValueChanged.AddListener(OnToggleValueChanged);
-            roombaUI.gameObject.SetActive(false);
+            roombaUI.gameObject.SetActive(defaultState);
         }
     }
 

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 namespace Oculus.Interaction
 {
-    public class RoombaCollider : MonoBehaviour
+    public class ToggleCollider : MonoBehaviour
     {
         [SerializeField, Interface(typeof(ISelector))]
         private UnityEngine.Object _selector;
 
         [SerializeField]
-        private Toggle roombaUI;
+        private Toggle UI;
 
         private ISelector Selector;
 
@@ -57,9 +57,9 @@ namespace Oculus.Interaction
 
         private void HandleSelected()
         {
-            if (roombaUI != null)
+            if (UI != null)
             {
-                roombaUI.isOn = !roombaUI.isOn;
+                UI.isOn = !UI.isOn;
             }
             if(_selected) return;
             _selected = true;
