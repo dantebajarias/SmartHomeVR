@@ -5636,7 +5636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lampUI: {fileID: 2030004898}
   lamp: {fileID: 219820164392871501}
-  defaultState: 0
+  defaultState: 1
 --- !u!1001 &2035788441
 PrefabInstance:
   m_ObjectHideFlags: 0
