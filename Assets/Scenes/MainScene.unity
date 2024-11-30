@@ -276,7 +276,6 @@ GameObject:
   - component: {fileID: 61013483}
   - component: {fileID: 61013484}
   - component: {fileID: 61013486}
-  - component: {fileID: 61013485}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -317,27 +316,6 @@ MonoBehaviour:
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
   _canvas: {fileID: 1438979624}
---- !u!114 &61013485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61013482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ecff74e52843a41ab3a441ac81379e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canvas: {fileID: 1438979624}
-  _renderScale: 1
-  _dimensionsDriveMode: 0
-  _resolution: {x: 128, y: 128}
-  _generateMipMaps: 0
-  _pixelsPerUnit: 100
-  _renderingLayers:
-    serializedVersion: 2
-    m_Bits: 32
 --- !u!114 &61013486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2515,6 +2493,7 @@ GameObject:
   - component: {fileID: 1438979622}
   - component: {fileID: 1438979621}
   - component: {fileID: 1438979625}
+  - component: {fileID: 1438979626}
   m_Layer: 5
   m_Name: MyCanvas
   m_TagString: Untagged
@@ -2633,6 +2612,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &1438979626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438979619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ecff74e52843a41ab3a441ac81379e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvas: {fileID: 1438979624}
+  _renderScale: 1
+  _dimensionsDriveMode: 0
+  _resolution: {x: 128, y: 128}
+  _generateMipMaps: 0
+  _pixelsPerUnit: 100
+  _renderingLayers:
+    serializedVersion: 2
+    m_Bits: 32
 --- !u!1 &1440704381
 GameObject:
   m_ObjectHideFlags: 0
