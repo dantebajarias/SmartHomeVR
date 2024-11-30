@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 61013483}
   - component: {fileID: 61013485}
   - component: {fileID: 61013484}
+  - component: {fileID: 61013486}
   m_Layer: 0
   m_Name: UICanvas
   m_TagString: Untagged
@@ -291,7 +292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61013482}
   m_LocalRotation: {x: 0.14780942, y: 0, z: 0, w: 0.9890159}
-  m_LocalPosition: {x: -0.1949, y: 0.998, z: 0.199}
+  m_LocalPosition: {x: 0.073, y: 0.94, z: 0.052}
   m_LocalScale: {x: 0.000060516897, y: 0.000047435748, z: 0.1652057}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -334,9 +335,9 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 61013484}
   _surfacePatch: {fileID: 2050676127}
-  _enterHoverNormal: 0.03
+  _enterHoverNormal: 0.5
   _enterHoverTangent: 0
-  _exitHoverNormal: 0.05
+  _exitHoverNormal: 0.03
   _exitHoverTangent: 0
   _cancelSelectNormal: 0.3
   _cancelSelectTangent: 0.03
@@ -375,7 +376,7 @@ MonoBehaviour:
       _animationLength: 0.05
   _positionPinning:
     Enabled: 0
-    MaxPinDistance: 0.075
+    MaxPinDistance: 0
     PinningEaseCurve:
       serializedVersion: 2
       m_Curve:
@@ -462,6 +463,38 @@ MonoBehaviour:
     ReEnterDistance: 0.02
   _closeDistanceThreshold: 0.001
   _tiebreakerScore: 0
+--- !u!114 &61013486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61013482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5626a0b1dc955a43be59ce7ea116678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointableCanvas: {fileID: 61013484}
+  _suppressWhileDragging: 1
+  _whenBeginHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenEndHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectedHovered:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectedEmpty:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselectedHovered:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselectedEmpty:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &76561625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1684,7 +1717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roombaUI: {fileID: 855904838}
   roomba: {fileID: 5411559979148098140}
-  defaultState: 0
+  defaultState: 1
 --- !u!222 &855904840
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2617,6 +2650,7 @@ GameObject:
   - component: {fileID: 1438979623}
   - component: {fileID: 1438979622}
   - component: {fileID: 1438979621}
+  - component: {fileID: 1438979625}
   m_Layer: 0
   m_Name: MyCanvas
   m_TagString: Untagged
@@ -2632,7 +2666,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438979619}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 4.19}
   m_LocalScale: {x: 3.5791044, y: 5.223681, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2643,7 +2677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 5914, y: 2354}
+  m_AnchoredPosition: {x: 5914, y: 2279}
   m_SizeDelta: {x: 1577, y: 908}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1438979621
@@ -2722,6 +2756,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1438979625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438979619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1440704381
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,9 +3661,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050676124}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5886, y: 2253, z: 0.5}
-  m_LocalScale: {x: 5485.655, y: 4929.9595, z: 0.05536149}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5886, y: 2253, z: 4.19}
+  m_LocalScale: {x: 5485.6543, y: 4929.96, z: 0.05863012}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 61013483}
@@ -3998,7 +4045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5411559979609670800, guid: df6776d3b60b6b74eb3bdda128597f85, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5517754365605583852, guid: df6776d3b60b6b74eb3bdda128597f85, type: 3}
       propertyPath: m_RootOrder
