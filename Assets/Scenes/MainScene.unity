@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05286c0ba6fafc4e8a6063008e29a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaLight: {fileID: 1724852318}
+  areaLight: {fileID: 1724852321}
   colorToggle: {fileID: 180423651}
   colorOn: {r: 0.96470594, g: 1, b: 0, a: 1}
 --- !u!1 &206793758
@@ -1893,7 +1893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.64817804, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2187,6 +2187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442719696}
   - component: {fileID: 442719697}
+  - component: {fileID: 442719698}
   m_Layer: 0
   m_Name: IntensitySlider
   m_TagString: Untagged
@@ -2261,25 +2262,28 @@ MonoBehaviour:
   m_FillRect: {fileID: 1206351593}
   m_HandleRect: {fileID: 572370399}
   m_Direction: 0
-  m_MinValue: 1
-  m_MaxValue: 10
-  m_WholeNumbers: 1
-  m_Value: 1
+  m_MinValue: 0
+  m_MaxValue: 2
+  m_WholeNumbers: 0
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1724852318}
-        m_TargetAssemblyTypeName: UnityEngine.Light, UnityEngine
-        m_MethodName: set_intensity
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &442719698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442719695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae882cdd98d8c3d42bdeb650dd0e0f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLight: {fileID: 1724852321}
+  intensitySlider: {fileID: 442719697}
+  defaultIntensity: 3
 --- !u!4 &455431986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2458109234371223003, guid: 62a8aac050cdccb4b95799014dd63f0e, type: 3}
@@ -4088,7 +4092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05286c0ba6fafc4e8a6063008e29a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaLight: {fileID: 1724852318}
+  areaLight: {fileID: 1724852321}
   colorToggle: {fileID: 883947886}
   colorOn: {r: 0, g: 1, b: 0.909804, a: 1}
 --- !u!1 &895177226
@@ -4294,7 +4298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05286c0ba6fafc4e8a6063008e29a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaLight: {fileID: 1724852318}
+  areaLight: {fileID: 1724852321}
   colorToggle: {fileID: 954483720}
   colorOn: {r: 1, g: 0, b: 0.8588236, a: 1}
 --- !u!4 &956391667 stripped
@@ -5028,7 +5032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05286c0ba6fafc4e8a6063008e29a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaLight: {fileID: 1724852318}
+  areaLight: {fileID: 1724852321}
   colorToggle: {fileID: 1064598566}
   colorOn: {r: 0, g: 0.10980393, b: 1, a: 1}
 --- !u!1 &1072346624
@@ -5625,7 +5629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.8978294, b: 0.048460312, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6016,7 +6020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05286c0ba6fafc4e8a6063008e29a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaLight: {fileID: 1724852318}
+  areaLight: {fileID: 1724852321}
   colorToggle: {fileID: 1255507337}
   colorOn: {r: 0, g: 1, b: 0.058823533, a: 1}
 --- !u!223 &1260884280 stripped
@@ -6196,7 +6200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.5927309, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6268,7 +6272,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &1349014559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6281,7 +6285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05286c0ba6fafc4e8a6063008e29a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaLight: {fileID: 1724852318}
+  areaLight: {fileID: 1724852321}
   colorToggle: {fileID: 1349014558}
   colorOn: {r: 1, g: 0.5921569, b: 0, a: 1}
 --- !u!1 &1360435096
@@ -6437,7 +6441,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &1360435102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6450,7 +6454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05286c0ba6fafc4e8a6063008e29a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaLight: {fileID: 1724852318}
+  areaLight: {fileID: 1724852321}
   colorToggle: {fileID: 1360435101}
   colorOn: {r: 0.9725491, g: 0, b: 0, a: 1}
 --- !u!1 &1369255085
@@ -6539,7 +6543,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1724852318}
+      - m_Target: {fileID: 1724852321}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 0
@@ -8171,11 +8175,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6286776066182043055, guid: 0f5ccd7d510f22f408353bfaa558e9e7, type: 3}
   m_PrefabInstance: {fileID: 1887108727}
   m_PrefabAsset: {fileID: 0}
---- !u!108 &1724852318 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 7706979916847776140, guid: 05909c894d941ab4eb94ab4ca1717e96, type: 3}
+--- !u!1 &1724852317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2908255462073155556, guid: 05909c894d941ab4eb94ab4ca1717e96, type: 3}
   m_PrefabInstance: {fileID: 219820164392871499}
   m_PrefabAsset: {fileID: 0}
+--- !u!108 &1724852321
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724852317}
+  m_Enabled: 0
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1859212961
 GameObject:
   m_ObjectHideFlags: 0
@@ -9295,7 +9361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9611,7 +9677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7706979916847776140, guid: 05909c894d941ab4eb94ab4ca1717e96, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7706979916847776140, guid: 05909c894d941ab4eb94ab4ca1717e96, type: 3}
       propertyPath: m_DrawHalo
@@ -9621,7 +9687,8 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7706979916847776140, guid: 05909c894d941ab4eb94ab4ca1717e96, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 05909c894d941ab4eb94ab4ca1717e96, type: 3}
 --- !u!4 &543450653124064638 stripped
 Transform:
