@@ -886,15 +886,15 @@ GameObject:
   m_Component:
   - component: {fileID: 296147781}
   - component: {fileID: 296147780}
-  - component: {fileID: 296147779}
   - component: {fileID: 296147782}
+  - component: {fileID: 296147779}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &296147779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,7 +902,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296147778}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
@@ -954,29 +954,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 296147778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f1a9a1d119a5944aacfb87d1ec283a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 2518c50cb3fc6a6458d4b743c2f69c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
-  rayTransform: {fileID: 1288039042}
-  m_Cursor: {fileID: 0}
-  joyPadClickButton: 1
-  gazeClickKey: 32
-  performSphereCastForGazepointer: 0
-  useRightStickScroll: 1
-  rightStickDeadZone: 0.15
-  useSwipeScroll: 1
-  swipeDragThreshold: 2
-  swipeDragScale: 1
-  InvertSwipeXAxis: 0
-  angleDragThreshold: 1
-  m_SpherecastRadius: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_AllowActivationOnMobileDevice: 1
+  _useInitialPressPositionForDrag: 1
 --- !u!1 &323212009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,11 +2684,6 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 8665636362165100146, guid: bd4c1dc45184c5e43be6d47f6c3bf025, type: 3}
   m_PrefabInstance: {fileID: 8665636360863866220}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1288039042 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1180085929413491868, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
-  m_PrefabInstance: {fileID: 164022717}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1374959006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3515,6 +3492,10 @@ PrefabInstance:
     - target: {fileID: 1732808951507650, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
       propertyPath: m_Name
       value: UIHelpers
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732808951507650, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4897607310870066, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
       propertyPath: m_RootOrder
