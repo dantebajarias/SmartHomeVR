@@ -558,6 +558,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: efafe71bcfc254f51aa00cb9537c2051, type: 3}
   nextButton: {fileID: 765906679}
   previousButton: {fileID: 1962904710}
+  powerToggle: {fileID: 1118165742}
 --- !u!1 &84538095
 GameObject:
   m_ObjectHideFlags: 0
@@ -3676,7 +3677,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1118165739}
   - component: {fileID: 1118165742}
-  - component: {fileID: 1118165741}
   - component: {fileID: 1118165740}
   m_Layer: 0
   m_Name: TVturnonofftoggle
@@ -3715,21 +3715,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118165738}
   m_CullTransparentMesh: 1
---- !u!114 &1118165741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1118165738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4d9b7880888f7c4192f0eb46edb7481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roombaUI: {fileID: 1118165742}
-  roomba: {fileID: 5411559979148098140}
-  defaultState: 1
 --- !u!114 &1118165742
 MonoBehaviour:
   m_ObjectHideFlags: 0
