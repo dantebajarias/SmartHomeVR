@@ -11,7 +11,7 @@ namespace Oculus.Interaction
         private UnityEngine.Object _selector;
 
         [SerializeField]
-        private Toggle UI;
+        private GameObject UI;
 
         private ISelector Selector;
 
@@ -59,7 +59,7 @@ namespace Oculus.Interaction
         {
             if (UI != null)
             {
-                UI.gameObject.SetActive(false);
+                UI.SetActive(false);
             }
             if(_selected) return;
             _selected = true;
