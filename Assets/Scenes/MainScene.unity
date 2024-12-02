@@ -993,7 +993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1140.8, y: -582.7}
+  m_AnchoredPosition: {x: 1140.8, y: -346}
   m_SizeDelta: {x: 2281.6, y: 1165.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &136505280
@@ -4697,8 +4697,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1170, y: -1393}
-  m_SizeDelta: {x: 1667.3, y: 830.8}
+  m_AnchoredPosition: {x: 1170, y: -1386}
+  m_SizeDelta: {x: 1667.3, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &791215853
 CanvasRenderer:
@@ -6090,7 +6090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1054693976
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7204,11 +7204,13 @@ GameObject:
   - component: {fileID: 1208548914}
   - component: {fileID: 1208548913}
   - component: {fileID: 1208548912}
+  - component: {fileID: 1208548928}
   - component: {fileID: 1208548911}
   - component: {fileID: 1208548910}
   - component: {fileID: 1208548909}
   - component: {fileID: 1208548908}
   - component: {fileID: 1208548907}
+  - component: {fileID: 1208548927}
   m_Layer: 0
   m_Name: CloseAllUI
   m_TagString: Untagged
@@ -7497,7 +7499,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208548905}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6137da04b96b3a5458fac63522c5ac3f, type: 3}
   m_Name: 
@@ -7513,7 +7515,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208548905}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6137da04b96b3a5458fac63522c5ac3f, type: 3}
   m_Name: 
@@ -7617,6 +7619,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208548905}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1208548927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208548905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6434861918cf144d3a92c17b8ea12497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selector: {fileID: 626371546}
+  UI: {fileID: 791215851}
+--- !u!114 &1208548928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208548905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6434861918cf144d3a92c17b8ea12497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selector: {fileID: 987032247}
+  UI: {fileID: 791215851}
 --- !u!1 &1209835769
 GameObject:
   m_ObjectHideFlags: 0
@@ -10611,7 +10641,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.063412234, b: 0.063412234, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -11585,6 +11615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2023912800}
   - component: {fileID: 2023912801}
+  - component: {fileID: 2023912802}
   m_Layer: 0
   m_Name: PS3Toggle
   m_TagString: Untagged
@@ -11660,20 +11691,24 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1842643239}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &2023912802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023912799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a61ec7dab0de740a6bd4885d97adf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaLight: {fileID: 1842643242}
+  colorToggle: {fileID: 2023912801}
+  colorOn: {r: 0, g: 0.8177192, b: 1, a: 0}
+  colorOff: {r: 0.990566, g: 0, b: 0.017594144, a: 0}
 --- !u!1 &2025739060
 GameObject:
   m_ObjectHideFlags: 0
