@@ -18,6 +18,9 @@ public class ChannelController : MonoBehaviour
     public Button previousButton; // 下按钮
 
     public Toggle powerToggle; // 控制电视开关的 Toggle
+
+    public Slider volumeSlider; // 控制音量的 Slider
+
     private bool isTVOn = false; // 表示电视的开关状态
 
     void Start()
@@ -34,6 +37,13 @@ public class ChannelController : MonoBehaviour
 
         // 添加 Toggle 状态变化监听器
         powerToggle.onValueChanged.AddListener(SetTVState);
+
+
+        // 添加 Slider 值变化监听器
+        volumeSlider.onValueChanged.AddListener(SetVolume);
+
+        // 初始化音量
+        volumeSlider.value = audioSource.volume;
     }
 
 
@@ -87,6 +97,15 @@ public class ChannelController : MonoBehaviour
                 audioSource.clip = channelAudioClips[currentChannel];
                 audioSource.Play();
             }
+        }
+    }
+
+        // 设置音量
+    void SetVolume(float volume)
+    {
+        if (audioSource != null)
+        {
+            audioSource.volume = volume; // 设置音频源的音量
         }
     }
 }
